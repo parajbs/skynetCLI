@@ -1,0 +1,44 @@
+{
+  "name": "skynetCLI",
+  "version": "0.1.0-beta1",
+  "description": "A Cli to interact with Skynet based on SkynetLabs/nodejs-skynet",
+  "repository": "https://github.com/parajbs/skynetCLI",
+  "main": "src/skynet.js",
+  "scripts": {
+    "build": "yarn clean && yarn pkg-all",
+    "clean": "rimraf bin",
+    "pkg-linux": "pkg -t linux src/skynet.js  -o bin/linux/skynet",
+    "pkg-macos": "pkg -t macos src/skynet.js  -o bin/macos/skynet",
+    "pkg-win": "pkg -t win src/skynet.js  -o bin/win/skynet.exe",
+    "pkg-all": "yarn pkg-linux && yarn pkg-macos && yarn pkg-win",
+    "format": "prettier --write .",
+    "lint": "yarn lint:eslint",
+    "lint:eslint": "eslint . --max-warnings 0",
+    "test": "test"
+  },
+  "keywords": [
+    "Decentralised",
+    "Cloud Storage",
+    "Sia",
+    "SkynetCLI"
+  ],
+  "author": "parajbs",
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@skynetlabs/skynet-nodejs": "^2.7.0",
+    "commander": "^9.3.0",
+    "open": "^8.4.0",
+    "pkg": "^5.8.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.0.0",
+    "jest": "^28.0.1",
+    "lint-staged": "^13.0.0",
+    "prettier": "^2.0.5",
+    "rimraf": "^3.0.2",
+    "tmp": "0.2.1"
+  }
+}
