@@ -1,3 +1,12 @@
+# attention information!!!
+this repo was transferred to a new account "parajbs-dev" and further developed there.
+
+link: https://github.com/parajbs-dev/skynetCLI
+
+this old repo will be deleted from this account "parajbs" in early 2023.
+
+---
+
 # skynetCLI
 A Cli to interact with Skynet based on "SkynetLabs/nodejs-skynet".
 
